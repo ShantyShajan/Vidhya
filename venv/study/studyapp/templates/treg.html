@@ -1,0 +1,45 @@
+{%extends 'admilayout.html'%}
+{%block content%}
+                    
+
+<div class="contact-form">
+    
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-2">
+            <h1 class="text-white display-1">TEACHER REGISTRATION</h1>
+        </div>
+    </div>
+</div>           
+
+<body> 
+
+            <div class="contact-form">
+                
+                <form method="post">
+                    {%csrf_token%}
+                <center>
+                    <div class="column">
+                        <div class="col-3 form-group">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="User Name" required="required" name="name">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" name="email">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" Gender" required="required" name="gender">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Mobile " required="required" name="mobile">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="class" required="required" name="course">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Qualification" required="required" name="qualification">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Experience" required="required" name="experience">
+                            <input type="password" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" password" required="required" name="password">
+                            <input type="password" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Confirm password" required="required" name="cpass">
+                        </div>
+                    </div>  
+                </center>
+                
+            <div>
+            <center>
+                <button class="btn btn-primary py-3 px-5" type="submit">REGISTER</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary py-3 px-5" type="/back">BACK</button>
+            </center>
+            </div>   
+            </form>
+</body>
+{%endblock%}
+</html>

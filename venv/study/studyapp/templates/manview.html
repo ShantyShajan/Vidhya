@@ -1,0 +1,47 @@
+
+{%extends 'admilayout.html'%}
+{%block content%}
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+        <div class="container text-center my-1 py-1">
+            <h1 class="text-white display-1 mb-1">MANAGER VIEW</h1><br>
+            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- header end -->
+     <table class="table table-borderless table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Mobile</th>
+                <th>Qualification</th>
+                <th>Experience</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in a%}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.mobile}}</td>
+                <td>{{i.qualification}}</td>
+                <td>{{i.experience}}</td>
+                <td><a class="btn btn-success btn-sm" href="/editman/{{i.id}}">EDIT</a>
+                <td><a class="btn btn-danger btn-sm" href="/dltman/{{i.id}}">DELETE</a></td> 
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table> 
+</body>
+{%endblock%}
+</html>

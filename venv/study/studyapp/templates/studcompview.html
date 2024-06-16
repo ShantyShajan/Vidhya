@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>vidhya</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../static/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>9745197582</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>vidhya@example.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-2">
+            <a href="/index" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>VIDHYA</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="/adminhome" class="nav-item nav-link ">Home</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Register</a>
+                    <div class="nav-item dropdown">
+                        <div class="dropdown-menu m-0">
+                            <a href="/treg" class="dropdown-item">Teacher</a>
+                            <a href="/manreg" class="dropdown-item">Manager</a>
+                            <a href="/ereg" class="dropdown-item">Examiner</a> 
+                        </div>
+                    </div>
+                    <a href="/manaview1"class="nav-item nav-link">User</a>
+
+                    <a href="/timetable" class="nav-item nav-link">Time Table</a>
+                    <a href="/result" class="nav-item nav-link">Exam Result</a>
+                    <a href="/studcompview" class="nav-item nav-link">Complaints</a>
+                    <a href="/logout" class="nav-item nav-link">Logout</a>
+                </div>
+                <!-- <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a> -->
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+        <div class="container text-center my-1 py-1">
+            <h1 class="text-white display-1 mb-1">STUDENT COMPLAINT VIEW</h1><br>
+            <!-- <a href="/studcomp_response"class="text-white display-5 mb-5 nav-item nav-link active">RESPOND</a> -->
+            <a href="/tcompview"class="text-white display-5 mb-5 nav-item nav-link active">TEACHER COMPLAINTS </a>
+            <!-- <a href="/teachview"class="text-white display-5 mb-5 nav-item nav-link active">TEACHER VIEW</a>
+            <a href="/manview" class="text-white display-5 mb-5 nav-item nav-link active">MANAGER VIEW</a>
+            <a href="/exview" class="text-white display-5 mb-5n nav-item nav-link active">EXAMINER VIEW</a> -->
+        
+            <div class="mx-auto mb-1" style="width: 100%; max-width: 200px;">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- header end -->
+<table class="table table-borderless table-hover">
+    <thead>
+        <tr>
+           
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Complaint</th>
+            <th>Usertype</th>
+            <th>Respond</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in a%}
+        <tr>
+
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.subject}}</td>
+            <td>{{i.complaint}}</td>
+            <td>{{i.usertype}}</td>
+            <td><a class="btn btn-success btn-sm" href="/studcompview_response">RESPOND</a></td>
+            <td><a class="btn btn-danger btn-sm" href="/deletecomp/{{i.id}}">DELETE</a></td> 
+        </tr>
+        {%endfor%}
+    </tbody>
+</table></body> 
+    <!-- Footer Start -->
+ <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-1" style="margin-top: 90px;">
+    <div class="container mt-3 pt-3">
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <a href="/index" class="navbar-brand">
+                    <h1 class="mt-n2 text-uppercase text-white"><i class="fa fa-book-reader mr-3"></i>Vidhya</h1>
+                </a>
+                <p class="m-0">The world is constantly changing and growing, and so are all the wonderful things to learn in it.
+                    When you’re out of school, however, it can be hard to find places to learn new things, create new skills, and expand your horizons. 
+                    The Internet is helping to solve this by making courses and training easier to find than ever before. Online classes are the perfect 
+                    way for most to continue their education and we’ve put together a list of sources to help you find the best fit for you.</p>
+            </div>
+            <div class="col-md-6 mb-5">
+                <!-- <h3 class="text-white mb-4">Newsletter</h3> -->
+                <div class="w-100">
+                    <div class="input-group">
+                        <!-- <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address"> -->
+                        <div class="input-group-append">
+                            <!-- <button class="btn btn-primary px-4">Sign Up</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p><i class="fa fa-map-marker-alt mr-2"></i> India</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+9745197582</p>
+                <p><i class="fa fa-envelope mr-2"></i>vidhya@example.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
+                    <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
+                    <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                    <a class="text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <h3 class="text-white mb-4">Our Courses</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Web Design</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Apps Design</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Marketing</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Research</a>
+                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>SEO</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <h3 class="text-white mb-4">Quick Links</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms & Condition</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Regular FAQs</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help & Support</a>
+                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0">Copyright &copy; <a class="text-white" href="#">Your Site Name</a>. All Rights Reserved.
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <p class="m-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/lib/easing/easing.min.js"></script>
+<script src="../static/assets/lib/waypoints/waypoints.min.js"></script>
+<script src="../static/assets/lib/counterup/counterup.min.js"></script>
+<script src="../static/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="../static/assets/js/main.js"></script>
+</body>
+{%block content%}
+{%endblock%}
+</html>

@@ -1,0 +1,42 @@
+{%extends 'elaout.html'%}
+{%block content%}
+                    
+<div class="contact-form">
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1">EDIT </h1>
+            <div class="d-inline-flex text-white mb-5">
+            </div>
+        </div>
+    </div>
+</div>           
+
+<body> 
+
+            <div class="contact-form">
+                
+                <form method="post">
+                    {%csrf_token%}
+                <center>
+                    <div class="column">
+                        <div class="col-3 form-group">
+                         <!-- <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" examname" required="required" name="examname"value="{{res.examname}}"> -->
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" class" required="required" name="classe"value="{{res.classe}}"> 
+                            <input type="date" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="date" required="required" name="ddate"value="{{res.ddate}}">
+                            <input type="time" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" time" required="required" name="time"value="{{res.time}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" subject" required="required" name="subject"value="{{res.subject}}">
+                            <!-- <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" link" required="required" name="link"value="{{res.link}}"> -->
+                        </div>
+                    </div>  
+                </center>
+                
+            <div>
+            <center>
+                <button class="btn btn-primary py-3 px-5" type="submit">SAVE</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary py-3 px-5" type="/back">BACK</button>
+            </center>
+            </div>   
+            </form>
+</body>
+{%endblock%}
+</html>

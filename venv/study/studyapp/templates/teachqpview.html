@@ -1,0 +1,44 @@
+{%extends 'tlayout.html'%}
+{%block content%}
+<body>
+    <div class="contact-form">
+        <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+            <div class="container text-center py-5">
+                <h1 class="text-white display-1">QUSETION PAPER VIEW</h1>
+                <div class="d-inline-flex text-white mb-5">
+                </div>
+        </div>
+        </div>
+        
+    <!-- Header End -->
+
+     <table class="table table-borderless table-hover">
+        <thead>
+            <tr>
+                <th>classe</th>
+                <th>subject</th>
+                <th>year</th>
+                <th>question paper</th>
+                <th>Delete</th>
+                <!-- <th>browse</th> -->
+              
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in a%}
+            <tr>
+                <td>{{i.classe}}</td>
+                <td>{{i.subject}}</td>
+                <td>{{i.year}}</td>
+                <!-- <video controls width="600px" height="300px" >  -->
+                    <a href="{{i.file}}" target="_blank"></a>
+                     <!-- </video>  -->
+                <td><a href="{{i.browse}}" target="_blank">{{i.browse}}</a></td> 
+                <td><a class="btn btn-danger btn-sm" href="/deleteqp/{{i.id}}">DELETE</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+{%endblock%}
+</html>

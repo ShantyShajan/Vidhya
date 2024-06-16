@@ -1,0 +1,46 @@
+{%extends 'admilayout.html'%}
+{%block content%}
+<body>
+    <div class="contact-form">
+        <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+            <div class="container text-center py-5">
+                <h1 class="text-white display-1">TEACHER COMPLAINT VIEW</h1>
+                <!-- <a href="/tcomp_response"class="text-white display-5 mb-5 nav-item nav-link active">RESPONSE</a> -->
+                <div class="d-inline-flex text-white mb-5">
+                </div>
+        </div>
+        </div>
+<!-- header end -->
+<div class="contact-form">
+                
+    <form method="post">
+        {%csrf_token%}
+     <table class="table table-borderless table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Complaint</th>
+                <th>Usertype</th>
+                <th>Response</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in a%}
+            <tr>
+                <td>{{i.uid.name}}</td>
+                <td>{{i.uid.email}}</td>
+                <td>{{i.subject}}</td>
+                <td>{{i.complaint}}</td>
+                <td>{{i.usertype}}</td>
+                <td><a class="btn btn-success btn-sm" href="/tcomp_response">RESPOND</a></td>
+                <td><a class="btn btn-danger btn-sm" href="/dltstcomp">DELETE</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table> 
+</body>
+{%endblock%}
+</html>

@@ -1,0 +1,65 @@
+{%extends 'tlayout.html'%}
+{%block content%}
+    <center>
+        <body>
+            <div class="contact-form">
+                <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+                    <div class="container text-center py-5">
+                        <h1 class="text-white display-1">ONLINE CLASS</h1>
+                        <a href="/tmeetview"class="text-white display-5 mb-5 nav-item nav-link active">ONLINE CLASS VIEW </a>
+                        <div class="d-inline-flex text-white mb-5">
+                        </div>
+                </div>
+                </div>
+            <div class="contact-form">
+                <form method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    <div class="column">
+                        <div class="col-3 form-group">
+                            <input type="date" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Date" name="date" required="required">
+                        </div>
+                        <div class="col-3 form-group">
+                            <input type="time" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Time" name="time" required="required">
+                        </div>
+                        <div class="col-3 form-group">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" name="subject" required="required">
+                        </div>
+                        <div class="col-3 form-group">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="class" name="classes" required="required">
+                        </div>
+                        <div class="col-3 form-group">
+                            <input type="url" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="link" name="link" required="required"> 
+                        </div>
+                    </div>
+                   
+                    <div>
+                        <button class="btn btn-primary py-3 px-5" type="submit">UPLOAD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+           
+ 
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/lib/easing/easing.min.js"></script>
+<script src="../static/assets/lib/waypoints/waypoints.min.js"></script>
+<script src="../static/assets/lib/counterup/counterup.min.js"></script>
+<script src="../static/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="../static/assets/js/main.js"></script>
+</body>
+{%endblock%}
+</html>

@@ -1,0 +1,38 @@
+{%extends 'studlayout.html'%}
+{%block content%}
+
+<form method="post">
+    {%csrf_token%}
+<body>
+    <div class="contact-form">
+        <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+            <div class="container text-center py-5">
+                <h1 class="text-white display-1">JOB OFFER</h1>
+            </div>
+        </div>
+    </div>           
+    <center>
+    <body>
+    <br><br>
+        <div class="col-3 form-group">
+            <div class="container" style="margin-right: 500px;">
+                <!-- <img src="https://www.theladders.com/wp-content/uploads/coder_190517.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Everything you need to know about becoming a software engineer" data-noaft="1" style="width: 300px; height: 200px; margin: 0px;">
+           -->
+           {% for i in a%}
+               <h1 align=left></h1>
+                <h1>{{i.job}}</h1>
+            </div>
+            <div>
+                <!-- <p>{{i.jobid}}</p> -->
+                <p>{{i.institution}}</p>
+                <p>{{i.location}}</p>
+                <p>{{i.salary}}</p>
+                <p>{{i.description}}</p>
+                <a href="/applyjob/{{i.id}}" class="btn btn-primary py-3 px-5">Apply</a><br><br>
+            </div>
+        </div><br>
+        {%endfor%}
+
+<form>
+</body>
+{%endblock%}

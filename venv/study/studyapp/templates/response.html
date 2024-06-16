@@ -1,0 +1,29 @@
+{%extends 'tlayout.html'%}
+{%block content%}
+<body>
+        <form method="post">
+            {%csrf_token%}
+    <div class="contact-form">
+        <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+            <div class="container text-center py-5">
+                <h1 class="text-white display-1">RESPONSE</h1>
+                <div class="d-inline-flex text-white mb-5">
+                </div>
+        </div>
+        </div>
+
+        <div class="center">
+            <div class="form-group">
+             <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="7" placeholder="Text Message" name="message" required="required"></textarea>
+            </div>
+         </div>
+         <div>
+             <center>
+                 <button class="btn btn-primary py-3 px-5" type="submit">SEND</button>&nbsp;&nbsp;&nbsp;
+             </center>
+     </div>
+     </form>
+     </body>
+     {%endblock%}
+     </html>
+     

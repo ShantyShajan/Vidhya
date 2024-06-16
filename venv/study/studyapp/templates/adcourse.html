@@ -1,0 +1,38 @@
+{%extends 'manlayout.html'%}
+{%block content%}
+
+<form method="post">
+    {%csrf_token%}
+<div class="contact-form">
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1">ADD COURSES</h1>
+        </div>
+    </div>
+</div>           
+<center>
+<body>
+<br><br>
+    <div class="col-10 form-group">
+        <input type="name" name="name" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="COURSE  NAME" name="name" required="required">
+    </div><br>
+    <!-- <div class="col-10 form-group">
+        <input type="text area" name="description" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="DESCRIPTION" name="description" required="required"> -->
+        <div class="form-group">
+            <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="7" placeholder="DESCRIPTION" required="required" name="description"></textarea>
+        </div>
+    </center>
+ 
+    <center>
+        <button class="btn btn-primary py-3 px-5" type="submit">ADD</button>
+    </center></form>
+    </body>
+
+{%endblock%}
+</html>
+
+
+
+
+
+

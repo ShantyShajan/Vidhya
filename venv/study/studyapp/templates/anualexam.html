@@ -1,0 +1,86 @@
+{%extends 'elaout.html'%}
+{%block content%}
+
+<form method="post">
+    {%csrf_token%}
+<div class="contact-form">
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1">ANNUAL EXAM TIME TABLE</h1>
+            <a href="/uploadqb"class="text-white display-5 mb-5 nav-item nav-link active">VIEW ANNUAL EXAMS TIMETABLE</a>
+           
+        </div>
+    </div>
+</div>           
+<center>
+  <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 80%;
+        }
+        
+        td, th {
+          border: 3px solid #dddddd;
+          text-align: left;
+          padding: 10px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h2>ADD TIME TABLE <TABLE></TABLE></h2> 
+      
+       <br>
+        <table>
+          <tr>
+            <th>Date & Day</th>
+            <th>Time</th> 
+            <th>Subject</th>
+                        
+          </tr>
+
+          <tr>
+            <td><input type="date"><input type="text"placeholder="Day"><name="ddate"></td>
+            <td><input type="time"><name="date"></td> 
+            <td><input type="subject"><name="subject"></td>
+          </tr>
+          <!-- <tr>
+            <td><input type="date"><name="date"></name></td>
+            <td><input type="time"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td><input type="date"><name="date"></name></td>
+            <td><input type="time"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td><input type="date"><name="date"></name></td>
+            <td><input type="time"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td><input type="date"></td>
+            <td><input type="time"></td>
+            <td><input type="text"></td> -->
+          </tr>
+        </table>   
+  <br><br>
+    <center>
+        <button class="btn btn-primary py-3 px-5" type="submit">UPLOAD</button>
+    </center></form> 
+    </body>
+
+{%endblock%}
+</html>
+
+
+
+
+
+

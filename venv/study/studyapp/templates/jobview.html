@@ -1,0 +1,49 @@
+{%extends 'manlayout.html'%}
+{%block content%}
+
+<div class="contact-form">
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1"> VIEW REGISTRATIONS</h1>
+            <div class="d-inline-flex text-white mb-5">
+            </div>
+    </div>
+</div>
+
+<table class="table table-borderless table-hover">
+    <thead>
+        <tr>
+            
+            <th>name</th>
+            <th>address</th>
+            <th>dob</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>mobile</th>
+            <th>qualification</th>
+            <th>experience</th>
+            <th>specialization</th>
+            <th>year</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        {% for i in a%}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.dob}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.qualification}}</td>
+            <td>{{i.experience}}</td>
+            <td>{{i.specialization}}</td>
+            <td>{{i.year}}</td>
+            
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+</body>
+{%endblock%}

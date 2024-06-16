@@ -1,0 +1,39 @@
+{%extends 'admilayout.html'%}
+{%block content%}
+<body>
+    <div class="contact-form">
+        <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+            <div class="container text-center py-5">
+                <h1 class="text-white display-1">TIME TABLE</h1>
+                <div class="d-inline-flex text-white mb-5">
+                </div>
+        </div>
+        </div>
+        
+    <!-- Header End -->
+
+     <table class="table table-borderless table-hover">
+        <thead>
+            <tr>
+                <!-- <th>Exam Name</th> -->
+                <th>Classe</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in a%}
+            <tr>
+                <!-- <td>{{i.examname}}</td> -->
+                <td>{{i.classe}}</td>
+                <td>{{i.ddate}}</td>
+                <td>{{i.time}}</td>
+                <td>{{i.subject}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+{%endblock%}
+</html>

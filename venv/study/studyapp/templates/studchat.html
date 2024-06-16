@@ -1,0 +1,33 @@
+{%extends 'studlayout.html'%}
+{%block content%}
+
+<form method="post">
+    {%csrf_token%}
+<body>
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+        <div class="container text-center my-5 py-5">
+            <!-- <h1 class="text-white mt-4 mb-4">Learn From Home</h1> -->
+            <h1 class="text-white display-1 mb-5">CHAT</h1>
+            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+       <div class="form-group">
+        <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="7" placeholder="Text Message" name="message" required="required"></textarea>
+       </div>
+    </div>
+    <div>
+        <center>
+            <button class="btn btn-primary py-3 px-5" type="submit">SEND</button>&nbsp;&nbsp;&nbsp;
+        </center>
+</div>
+</form>
+</body>
+{%endblock%}
+</html>

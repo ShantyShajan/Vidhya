@@ -1,0 +1,41 @@
+{%extends 'elaout.html'%}
+{%block content%}
+<body>
+    <div class="contact-form">
+        <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+            <div class="container text-center py-5">
+                <h1 class="text-white display-1">TIME TABLE</h1>
+                <div class="d-inline-flex text-white mb-5">
+                </div>
+        </div>
+        </div>
+        
+    <!-- Header End -->
+
+     <table class="table table-borderless table-hover">
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in a%}
+            <tr>
+                <td>{{i.classe}}</td>
+                <td>{{i.ddate}}</td>
+                <td>{{i.time}}</td>
+                <td>{{i.subject}}</td>
+                <td><a class="btn btn-success btn-sm" href="/edittimetable/{{i.id}}">EDIT</a>
+                <td><a class="btn btn-danger btn-sm" href="/dltt/{{i.id}}">DELETE</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+{%endblock%}
+</html>

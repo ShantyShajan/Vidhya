@@ -1,0 +1,42 @@
+{%extends 'manlayout.html'%}
+{%block content%}
+<body>
+<div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 50px;">
+    <div class="container text-center my-4 py-1">
+        <h1 class="text-white display-1 mb-5">VIEW COURSES</h1>
+        <div class="mx-auto mb-5" style="width: 100%; max-width: 100px;">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+<body>
+    <div class="contact-form">
+                
+        <form method="post">
+            {%csrf_token%}
+         <table class="table table-borderless table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in a%}
+                <tr>
+                    <td>{{i.name}}</td>
+                    <td>{{i.description}}</td>
+                    <td><a class="btn btn-danger btn-sm" href="/deleteecourse">DELETE</a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table> 
+
+<form>
+</body>
+{%endblock%}

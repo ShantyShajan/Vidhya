@@ -1,0 +1,44 @@
+{%extends 'studlayout.html'%}
+{%block content%}
+                    
+
+<div class="contact-form">
+    
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-2">
+            <h1 class="text-white display-1">CHAT</h1>
+            <a href="/tresponseview"class="text-white display-5 mb-5 nav-item nav-link active">MY CHATS </a>
+        </div>
+    </div>
+</div>           
+
+<body> 
+    <h2 class>ENJOY CHAT WITH YOUR FAVOURITES</h2>
+
+            <div class="contact-form">
+                
+                <form method="post">
+                    {%csrf_token%}
+                    <table class="table table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Course</th>
+                                <th>mobile</th>
+                                <th>Chat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in a%}
+                            <tr>
+                                <td>{{i.name}}</td>
+                                <td>{{i.course}}</td>
+                                <td>{{i.mobile}}</td>
+                                <td><a class="btn btn-success btn-sm" href="/studchat/{{i.id}}">CHAT</a>
+                            </tr>
+                            {%endfor%}
+                        </tbody>
+                    </table>
+                </body>
+{%endblock%}
+</html>

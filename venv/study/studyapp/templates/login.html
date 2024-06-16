@@ -1,0 +1,45 @@
+
+{%extends 'layout.html'%}
+{%block content%}
+
+<div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 50px;">
+    <div class="container text-center my-4 py-1">
+        <h1 class="text-white display-1 mb-5">LOGIN</h1>
+        <div class="mx-auto mb-5" style="width: 100%; max-width: 100px;">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+
+<body>
+   
+    <center>
+    <!-- <h1 class="m-0 text-uppercase text-primary">LOGIN</h1></center> -->
+        <div class="contact-form">
+                <form method="post"><center>
+                    {%csrf_token%}
+                        <div class="col-3 form-group">
+                            <input type="email" name="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Email" name="email" required="required">
+                        </div>
+                        <div class="col-3 form-group">
+                            <input type="password" name="password" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="password" name="password" required="required">
+                        </div>
+                    </div>  
+               </center>
+            <div>
+            <center>
+                <button class="btn btn-primary py-3 px-5" type="submit">LOGIN</button>
+                <button class="btn btn-primary py-3 px-5" type="">BACK</button>
+            </center>
+    </div>
+            </div>   
+
+
+        </form>
+</body>        
+   {%endblock%}

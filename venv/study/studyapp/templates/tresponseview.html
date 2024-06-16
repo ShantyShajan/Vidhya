@@ -1,0 +1,36 @@
+{%extends 'studlayout.html'%}
+{%block content%}
+
+<form method="post">
+    {%csrf_token%}
+<body>
+    <div class="contact-form">
+        <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+            <div class="container text-center py-5">
+                <h1 class="text-white display-1">RESPONSE</h1></div>
+            </div>
+    </div>           
+    <body> 
+                <table class="table table-borderless table-hover">
+                    <thead>
+                        <tr>
+                            <th>Message</th>
+                            <th>Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in a%}
+                        <tr>
+                            <td>{{i.message}}</td>
+                            <td>{{i.response}}</td>
+                                
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </form>
+            </body>
+{%endblock%}
+</html>
+
+    </form>

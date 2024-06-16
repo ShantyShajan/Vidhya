@@ -1,0 +1,54 @@
+{%extends 'tlayout.html'%}
+{%block content%}
+    <center>
+        
+<div class="contact-form">
+    
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-2">
+            <h1 class="text-white display-1">COMPLAINT</h1>
+        </div>
+    </div>
+</div>         
+       <form method="post">
+                    {%csrf_token%}
+                    <div class="row">
+                        
+                        <div class="col-6 form-group">
+                    <div class="form-group">
+                        <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="2" placeholder="Subject" name="subject" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="7" placeholder="Complaint" name="complaint" required="required"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary py-3 px-5" type="submit">SUBMIT</button>
+                    </div></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+           
+ 
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/lib/easing/easing.min.js"></script>
+<script src="../static/assets/lib/waypoints/waypoints.min.js"></script>
+<script src="../static/assets/lib/counterup/counterup.min.js"></script>
+<script src="../static/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="../static/assets/js/main.js"></script>
+</body>
+{%endblock%}
+</html>

@@ -1,0 +1,48 @@
+
+{%extends 'admilayout.html'%}
+{%block content%}
+                           
+
+<div class="contact-form">
+    
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-2">
+            <h1 class="text-white display-1">MANAGER REGISTRATION</h1>
+        </div>
+    </div>
+</div>           
+
+<body> 
+
+            <div class="contact-form">
+                
+                <form method="post">
+                    {%csrf_token%}
+                <center>
+                    <div class="column">
+                        <div class="col-3 form-group">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="User Name" required="required" name="name"value="{{res.name}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" Email" required="required" name="email"value="{{res.email}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" Gender" required="required" name="gender"value="{{res.gender}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Mobile " required="required" name="mobile"value="{{res.mobile}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Qualification" required="required" name="qualification"value="{{res.qualification}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Experience" required="required" name="experience"value="{{res.experience}}">
+                            <input type="password" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" password" required="required" name="password"value="{{res.password}}">
+                            <input type="password" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Confirm password" required="required" name="cpass"value="{{res.cpass}}">
+                        </div>
+                    </div>  
+                </center>
+                
+            <div>
+            <center>
+                <button class="btn btn-primary py-3 px-5" type="submit">REGISTER</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary py-3 px-5" type="/back">BACK</button>
+            </center>
+    </div>
+            </div>   
+
+
+        </form>
+</body>
+{%endblock%}
+</html>

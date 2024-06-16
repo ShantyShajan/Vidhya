@@ -1,0 +1,38 @@
+{%extends 'studlayout.html'%}
+{%block content%}
+
+<div class="contact-form">
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1"> ONLINE CLASS</h1>
+            <div class="d-inline-flex text-white mb-5">
+            </div>
+    </div>
+</div>
+
+<table class="table table-borderless table-hover">
+    <thead>
+        <tr>
+            
+            <th>date</th>
+            <th>time</th>
+            <th>subject</th>
+            <th>classes</th>
+            <th>link</th> 
+        </tr>
+        
+    </thead>
+    <tbody>
+        {% for i in a%}
+        <tr>
+            <td>{{i.date}}</td>
+            <td>{{i.time}}</td>
+            <td>{{i.subject}}</td>
+            <td>{{i.classes}}</td>
+            <td><a href="{{i.link}}" target="_blank">{{i.link}}</a></td> 
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+</body>
+{%endblock%}

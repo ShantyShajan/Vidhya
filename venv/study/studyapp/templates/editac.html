@@ -1,0 +1,45 @@
+
+{%extends 'studlayout.html'%}
+{%block content%}
+
+<div class="contact-form">
+    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 10px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-1">PROFILE</h1>
+        </div>
+    </div>
+</div>           
+
+<body> 
+
+            <div class="contact-form">         
+                <form method="post">
+                    {%csrf_token%}
+                <center>
+                    <div class="column">
+                        <div class="col-3 form-group">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="User Name" readonly="" required="required" name="name"value="{{res.name}}">
+                            <input type="date" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Date of birth" readonly="" required="required" name="dob"value="{{res.dob}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" Email" readonly=""  required="required" name="email"value="{{res.email}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" Gender" readonly=""  required="required" name="gender"value="{{res.gender}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Parents Mobile Number" readonly=""  required="required" name="mobile"value="{{res.mobile}}">
+                            <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="University/Board" readonly=""  required="required" name="board"value="{{res.board}}">
+                            <input type="password" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder=" password" readonly=""  required="required" name="password"value="{{res.password}}">
+                            <!-- <input type="password" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Confirm password" readonly=""  required="required" name="cpass"value="{{res.cpass}}"> -->
+                        </div>
+                    </div>  
+                </center>
+                
+            <div>
+            <center>
+                <div class="btn btn-primary py-3 px-5"> <a href="/editprof/{{res.id}}">EDIT</a></div> 
+               
+                <!-- <button class="btn btn-primary py-3 px-5" type="submit">EDIT</button>&nbsp;&nbsp;&nbsp; -->
+            </center>
+    </div>
+            </div>   
+
+
+        </form>
+</body>
+        {%endblock%}          
